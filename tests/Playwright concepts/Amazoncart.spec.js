@@ -110,23 +110,23 @@
 // })
 
 
-import { test, expect } from "@playwright/test";
-import { log } from "console";
+// import { test, expect } from "@playwright/test";
+// import { log } from "console";
 
-test ('Print the names of product in amazon', async ({ page }) => {
-  await page.goto('https://www.amazon.in/');
-  await page.locator('input#twotabsearchtextbox').fill('mobile')
-  await page.keyboard.press('Enter')
-  await page.locator('[aria-label*="Samsung"] input').check({force:true})
-  let card = await page.locator('[role="listitem"]')
-  for (let i=0;i< await card.count();i++){
-    let productNames=await card.nth(i).locator('h2 span').textcontent()
-    let productPrice=await card.nth(i).locator('.a-price-whole').textContent()
-  }
-console.log('${i+1}.product name :${productNames}');
-console.log('${i+1}.price :RS.${productPrice}/-');
-console.log(('-----------------------------'));
+// test ('Print the names of product in amazon', async ({ page }) => {
+//   await page.goto('https://www.amazon.in/');
+//   await page.locator('input#twotabsearchtextbox').fill('mobile')
+//   await page.keyboard.press('Enter')
+//   await page.locator('[aria-label*="Samsung"] input').check({force:true})
+//   let card = await page.locator('[role="listitem"]')
+//   for (let i=0;i< await card.count();i++){
+//     let productNames=await card.nth(i).locator('h2 span').textcontent()
+//     let productPrice=await card.nth(i).locator('.a-price-whole').textContent()
+//   }
+// console.log('${i+1}.product name :${productNames}');
+// console.log('${i+1}.price :RS.${productPrice}/-');
+// console.log(('-----------------------------'));
 
 
 
-})
+// })
